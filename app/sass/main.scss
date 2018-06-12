@@ -47,7 +47,9 @@ body textarea:required:valid {
 }
 
 html, body {
-	height: 100%;
+	min-width: 100%;
+	min-height: 100%;
+	overflow-x: hidden;
 }
 
 body {
@@ -369,6 +371,8 @@ a {
 	position: relative;
 	height: 85px;
 	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	border-radius: 4px;
 	box-shadow: 0px 0px 5.7px 0.3px rgba(28, 28, 28, 0.1);
 	margin-bottom: 30px;
@@ -388,7 +392,9 @@ a {
 .small__banner-texts {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
+	height: 100%;
 }
 
 .small__banner-title {
@@ -466,6 +472,10 @@ a {
 	margin-top: 15px;
 }
 
+.product__card-container {
+	margin-bottom: 23px;
+}
+
 .product__card {
 	position: relative;
 	display: block;
@@ -474,16 +484,18 @@ a {
 	height: 100%;
 	box-shadow: 0px 0px 5.7px 0.3px rgba(28, 28, 28, 0.1);
 	padding-bottom: 11px;
+	overflow: hidden;
 }
 
 .product__card-image {
 	position: relative;
 	height: 260px;
+	overflow: hidden;
 }
 
 .product__card-pic {
 	position: absolute;
-	width: 100%;
+	max-width: 100%;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -498,6 +510,16 @@ a {
 	font-size: 16px;
 	color: #333;
 	margin-left: 14px;
+	padding-bottom: 120px;
+}
+
+.product__card-bottom {
+	position: absolute;
+    width: 100%;
+    height: 130px;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
 }
 
 .product__card-art {
@@ -716,12 +738,12 @@ a {
 .catalog__menu_hover {
 	position: absolute;
 	display: none;
+	flex-wrap: wrap;
 	top: 0;
 	left: 262px;
-	max-width: 870px;
+	max-width: 882px;
 	width: auto;
 	min-height: 90px;
-	max-height: 180px;
 	padding-left: 5px;
 	padding-right: 15px;
 	border: 2px $second solid;
@@ -732,16 +754,8 @@ a {
 	background-color: #f5f5f5;
 }
 
-.catalog__menu-list_hover {
-	display: flex;
-	flex-wrap: wrap;
-}
-
 .catalog__menu-item_hover {
-	float: left;
 	display: block;
-	width: 205px;
-	height: 70px;
 	background-color: #fff;
 	box-shadow: 0px 0px 5.7px 0.3px rgba(28, 28, 28, 0.1);
 	border: 2px rgba(0,0,0,0) solid;
@@ -761,8 +775,8 @@ a {
 	position: relative;
 	display: flex;
 	align-items: center;
-	width: 100%;
-	height: 100%;
+	width: 205px;
+	height: 70px;
 }
 
 .catalog__menu-link_hover-pic {
@@ -777,5 +791,18 @@ a {
 	color: #333;
 }
 
+.mobile__menu {
+	display: none;
+	justify-content: flex-end;
+}
+
+.sm {
+	display: none;
+}
+
+.opened {
+	right: 0 !important;
+	transition: all .3s ease !important;
+}
 
 @import "media" // Всегда в конце
