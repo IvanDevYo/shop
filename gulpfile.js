@@ -39,6 +39,10 @@ gulp.task('common-js', function() {
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/jquery-ui-1.10.2.custom.min.js',
+		'app/libs/jquery.ui.slider.js',
+		'app/libs/jquery.mCustomScrollbar.js',
+		'app/libs/eskju.jquery.scrollflow.min.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
