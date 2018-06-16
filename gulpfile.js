@@ -43,6 +43,7 @@ gulp.task('js', ['common-js'], function() {
 		'app/libs/jquery.ui.slider.js',
 		'app/libs/jquery.mCustomScrollbar.js',
 		'app/libs/eskju.jquery.scrollflow.min.js',
+		'app/libs/owl.carousel.min.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
