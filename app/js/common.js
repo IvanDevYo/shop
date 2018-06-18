@@ -13,13 +13,27 @@ var interval, counter = 1;
 		$(th).css('display', 'flex');
 	});
 
+	$(".drop-open").click(function(e) {
+		e.preventDefault();
+		var th = $(this).parent().find(".drop_popup");
+		$(th).toggleClass("opened");
+		$(th).toggleClass("active");
+	});
+
 	$(".catalog__menu-item").mouseleave(function() {
 		$(".hover_popup").hide();
 	});
 
 	$(".mobile__menu-link").click(function(e) {
 		e.preventDefault();
-		$(".top__nav-nav").toggleClass("opened");
+		$(".mobile__catalog__menu-nav").removeClass("active");
+		$(".top__nav-nav").toggleClass("active");
+	});
+
+	$(".mobile__menu__catalog-link").click(function(e) {
+		e.preventDefault();
+		$(".top__nav-nav").removeClass("active");
+		$(".mobile__catalog__menu-nav").toggleClass("active");
 	});
 
 	$(".filter__params-link").click(function(e) {

@@ -803,11 +803,6 @@ a {
 	display: none;
 }
 
-.opened {
-	right: 0 !important;
-	transition: all .3s ease !important;
-}
-
 .breadcrumbs-list {
 	display: flex;
 }
@@ -818,6 +813,10 @@ a {
 	&:after {
 		content: " /";
 	}
+}
+
+.mobile__catalog__menu-nav {
+	display: none;
 }
 
 .catalog {
@@ -1506,5 +1505,4 @@ a {
 	margin-top: 10px;
 	margin-bottom: 85px;
 }
-
 @import "media" // Всегда в конце

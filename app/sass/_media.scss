@@ -209,44 +209,88 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px) {
-	.header {
-		margin-top: 50px;
+
+	.flx {
+		display: flex;
+		justify-content: flex-end;
 	}
 
-	.mobile__menu-link {
+	.mobile__menu {
+		width: 100px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-right: 20px;
+	}
+
+	.mobile__menu__catalog-link {
 		font-size: 24px;
 		color: #3b3b3b;
 	}
 
+	.mobile__menu-link {
+		font-size: 16px;
+		color: #3b3b3b;
+	}
+
 	.top__nav {
-		position: fixed;
-		top: 0;
-		width: 100%;
 		height: 50px;
-		z-index: 100000000;
+		z-index: 12312312312312;
 	}
 
 	.top__nav-nav {
 		position: absolute;
-		width: 320px;
-		height: calc(100vh - 34px);
+		width: 100%;
 		top: 50px;
-		right: -320px;
-		transition: all .3s ease;
-		background-color: $second;
-		z-index: 10000;
+		left: 0;
+		background-color: #3b3b3b;
+		z-index: 1;
+		overflow: hidden;
+		transition: .6s;
+		transform:  translateY(-150%);
+		opacity: 0;
+		&.active {
+			transform:  translateY(0%);
+			opacity: 1;
+		}
+	}
+
+	.mobile__catalog__menu-nav {
+		display: block;	
+		position: absolute;
+		width: 100%;
+		top: 50px;
+		left: 0;
+		background-color: #3b3b3b;
+		z-index: 1;
+		transition: .6s;
+		transform:  translateY(-150%);
+		opacity: 0;
+		&.active {
+			transform:  translateY(0%);
+			opacity: 1;
+		}
+	}
+
+	.drop_popup {
+		display: none;
+	}
+
+	.opened {
+		display: block;
 	}
 
 	.top__nav-list {
 		flex-direction: column;
 		align-items: flex-end;
 		justify-content: space-around;
-		height: 100%;
 	}
 
 	.top__nav-link {
 		font-size: 24px;
 		text-decoration: underline;
+		color: #fff;
 	}
 
 	.mobile__menu {
